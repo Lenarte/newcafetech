@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="stylesheet" href="otto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+
+    <main class="container">
+
+        <h1 class="heading">
+            <ion-icon name="cart-outline"></ion-icon> Carrinho
+        </h1>
+
+        <div class="item-flex">
+
+            <section class="checkout">
+
+                <h2 class="section-heading">Detalhes do Pagamento</h2>
+
+                <div class="payment-form">
+
+                    <div class="payment-method">
+
+                        <button class="method selected">
+                            <ion-icon name="card"></ion-icon>
+
+                            <span>Cartão de Credito</span>
+
+                            <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                        </button>
+
+                        <button class="method">
+                            <ion-icon name="logo-paypal"></ion-icon>
+
+                            <span>Paypal</span>
+
+                            <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+                        </button>
+
+                    </div>
+
+                    <form action="#">
+
+                        <div class="cardholder-name">
+                            <label for="cardholder-name" class="label-default"> Nome no Cartão </label>
+                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                        </div>
+
+
+                        <div class="card-number">
+                            <label for="card-number" class="label-default">Número do Cartão</label>
+                            <input type="number" name="card-number" id="card-number" class="input-default">
+                        </div>
+
+                        <div class="input-flex">
+
+                            <div class="expire-date">
+                                <label for="expire-date" class="label-default">Data de Validade</label>
+
+                                <div class="input-flex">
+
+                                    <input type="number" name="dia" id="expire-date"
+                                     placeholder="31" min="1" max="31" class="input-default">
+                                     /
+                                     <input type="number" name="mes" id="expire-date"
+                                     placeholder="12" min="1" max="12" class="input-default">
+
+                                </div>
+                            </div>
+
+                            <div class="cvv">
+                                <label for="cvv" class="label-default">CVV</label>
+                                <input type="number" name="cvv" id="cvv" class="input-default">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <button class="btn btn-primary">
+                    <b>pagar</b> R$ <span id="PayAmount">2.15</span>
+                </button>
+
+            </section>
+
+
+
+            <section class="cart">
+
+                <div class="cart-item-box">
+
+                    <h2 class="section-heading">Resumo do Pedido</h2>
+
+                    <div class="product-card">
+
+                        <div class="card">
+
+                            <div class="img-box">
+                                <img src="imagens/10-curisoidades-sobre-o-café.jpg" alt="cafezin" width="80px" class="product-img">
+                            </div>
+
+
+                              <div class="detail">
+
+                                <h4 class="product-name">Cafe gelado</h4>
+
+                                <div class="wrapper">
+
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        R$ <span id="price">1.25</span>
+                                    </div>
+
+                                </div>
+
+                              </div>
+
+                              <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                              </button>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+
+                        <div class="card">
+
+                            <div class="img-box">
+                                <img src="imagens/352516-original.webp" alt="3coracao" width="80px" class="product-img">
+                            </div>
+
+
+                              <div class="detail">
+
+                                <h4 class="product-name">Cafe 3 coracoes</h4>
+
+                                <div class="wrapper">
+
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        R$ <span id="price">3.25</span>
+                                    </div>
+
+                                </div>
+
+                              </div>
+
+                              <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                              </button>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="discount-cupom">
+
+                        <label for="discount-cupom" class="label-default">Cupom de Desconto</label>
+
+                        <div class="wrapper-flex">
+
+                            <input type="text" name="discount-cupom" id="discount-cupom" class="input-default">
+
+                                <button class="btn btn-outline">Aplicar</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="amount">
+
+                        <div class="subtotal">
+                            <span>subtotal</span> <span>R$ <span id="subtotal">3.15</span></span>
+                        </div>
+
+                        <div class="Frete">
+                            <span>Frete</span> <span>R$ <span id="Frete">10.00</span></span>
+                        </div>
+
+                        <div class="Total">
+                            <span>Total</span> <span>R$ <span id="Total">13.15</span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+</html>

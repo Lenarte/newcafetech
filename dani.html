@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CafeTech - Menu de Café</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-container">
+        <div class="header">
+            <h1>CafeTech</h1>
+        </div>
+        <div class="menu-tabs">
+            <button class="tab-button" onclick="showMenu('quente')">Quentes</button>
+            <button class="tab-button" onclick="showMenu('frio')">Frios</button>
+        </div>
+        <div id="quente" class="menu-grid">
+            <div class="cafe-item">
+                <img src="imagens/eafaf581ee6bac0bb46b0fef3c764e10.jpg" alt="Expresso com Nutella">
+                <span>Expresso com Nutella</span>
+                <button class="adicionar-ao-pedido" onclick="adicionarAoCarrinho('Expresso com Nutella')"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="cafe-item">
+                <img src="imagens/download.jfif" alt="Caffé Latte">
+                <span>Caffé Latte</span>
+                <button class="adicionar-ao-pedido" onclick="adicionarAoCarrinho('Caffé Latte')"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="cafe-item">
+                <img src="imagens/352516-original.webp" alt="Capuccino">
+                <span>Capuccino</span>
+                <button class="adicionar-ao-pedido" onclick="adicionarAoCarrinho('Capuccino')"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="cafe-item">
+                <img src="imagens/achocolatado-saudavel-580x483.png" alt="Achocolatado">
+                <span>Achocolatado</span>
+                <button class="adicionar-ao-pedido" onclick="adicionarAoCarrinho('Achocolatado')"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <div id="frio" class="menu-grid" style="display: none;">
+            <div class="cafe-item">
+                <img src="imagens/cafe_latte_gelado.jpg" alt="Café Latte Gelado">
+                <span>Café Latte Gelado</span>
+                <button class="adicionar-ao-pedido" onclick="adicionarAoCarrinho('Café Latte Gelado')"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="menu-container">
+        <h2>Carrinho</h2>
+        <ul id="itens-carrinho">
+        </ul>
+        <a href="otto.html">
+            <button class="botao-carrinho" onclick="irParaCarrinho()"><ion-icon name="cart-outline"></ion-icon></button>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

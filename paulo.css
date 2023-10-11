@@ -1,0 +1,38 @@
+div.cafe{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(imagens/f611bfb5-f247-4839-b668-86ba49ca447b.jpg)
+}
+div{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 50px;
+    color: white;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+        
+button{
+    background-color: rgb(76, 76, 194);
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white ;
+    font-size: 15px;
+}
+button:hover{
+    background-color: deepskyblue;
+}
